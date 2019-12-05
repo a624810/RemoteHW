@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+
+        android:layout_weight="1"
+        app:srcCompat="@drawable/loggo" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/imageView"
+                android:text=" #사용법\n\n
+1. 자바 프로그램에서 사용자 컴퓨터의 IP주소를 받는다.\n\n
+2. IP주소를 메인페이지에 입력후 접속한다.\n\n
+3. 첫페이지는 마우스 기능이며 상단의 탭을 통해 변경 가능하다.\n\n
+4. 스피커 모드와 동시 사용가능하다.\n\n
+5. 상단 탭의 자물쇠 버튼을 누르면 모든 버튼이 잠긴다.
+"
+                android:textStyle="bold"
+                ></TextView>
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="이용하실 서버의 IP 주소를 입력해주세요 !"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Start"
+        android:text="접속"
+        android:textSize="20dp"
+        android:background="#7D78FF"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        />
+
+
+</LinearLayout>

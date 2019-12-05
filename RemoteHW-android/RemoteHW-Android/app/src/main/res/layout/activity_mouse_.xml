@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mouse_Activity"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:splitMotionEvents="true"
+
+    android:weightSum="10">
+
+
+    <!-- 아래쪽 레이아웃 시작-->
+
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="5dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:splitMotionEvents="true">
+
+        <ImageButton
+            android:id="@+id/mouseMenuBtn"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:enabled="false"
+            android:scaleType="fitCenter"
+            android:text="마우스"
+            app:srcCompat="@drawable/mouseon" />
+
+        <ImageButton
+            android:id="@+id/pptMenuBtn"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:text="PPT"
+            app:srcCompat="@drawable/pptoff" />
+
+
+        <ImageButton
+            android:id="@+id/speakerMenuBtn"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:text="스피커"
+            app:srcCompat="@drawable/speakeroff" />
+
+        <ImageButton
+            android:id="@+id/rockMenuBtn"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:onClick="Rock"
+            android:scaleType="fitCenter"
+            android:text="잠금"
+            app:srcCompat="@drawable/rockoff" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/touchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10" />
+
+    <FrameLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:splitMotionEvents="true">
+
+        <LinearLayout
+            android:id="@+id/mouseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:splitMotionEvents="true">
+
+            <ImageButton
+                android:id="@+id/mouseLbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="3"
+                android:background="#FFFFFF"
+                android:scaleType="fitCenter"
+                android:text="L"
+                app:srcCompat="@drawable/leftbtn" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:splitMotionEvents="true">
+
+                <ImageButton
+                    android:id="@+id/mouseWheelUbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:text="Hup"
+                    app:srcCompat="@drawable/wheelupbtn" />
+
+                <ImageButton
+                    android:id="@+id/mouseWheelDbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:text="Hdown"
+                    app:srcCompat="@drawable/wheeldownbtn" />
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/mouseRbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="3"
+                android:background="#FFFFFF"
+                android:scaleType="fitCenter"
+                android:text="R"
+                app:srcCompat="@drawable/rigthbtn" />
+
+        </LinearLayout>
+
+        <!-- ppt 레이아웃-->
+
+        <LinearLayout
+            android:id="@+id/pptLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:splitMotionEvents="true"
+            android:visibility="invisible">
+
+
+            <ImageButton
+                android:id="@+id/pptLbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="3"
+                android:background="#FFFFFF"
+                android:scaleType="fitCenter"
+                android:text="뒤로가기"
+                app:srcCompat="@drawable/leftbtn" />
+
+            <ImageButton
+                android:id="@+id/pptRbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="3"
+                android:background="#FFFFFF"
+                android:scaleType="fitCenter"
+                android:text="앞으로가기"
+                app:srcCompat="@drawable/rigthbtn" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
